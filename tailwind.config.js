@@ -8,6 +8,13 @@ module.exports = {
       }
     }
   },
-  variants: {},
-  // plugins: [require("@tailwindcss/ui")]
+  darkMode: "class",
+  variants: {
+
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/forms")
+  ]
 }

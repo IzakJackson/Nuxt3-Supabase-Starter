@@ -1,12 +1,17 @@
 <template>
   <div>
-    <NuxtLayout v-if="user">
+    <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-    <Auth v-else />
   </div>
 </template>
 
 <script setup>
-const user = useSupabaseUser();
+const route = useRoute();
+
+useHead({
+  titleTemplate: `${route.meta.title} - Nuxt 3 Supabase Starter`,
+  htmlAttrs: { class: "h-full" },
+  bodyAttrs: { class: "h-full" },
+});
 </script>
